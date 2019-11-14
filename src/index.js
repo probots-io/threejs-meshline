@@ -264,7 +264,7 @@
     this.next.push(v[0], v[1], v[2])
     this.next.push(v[0], v[1], v[2])
 
-    // redefining the attribute seems to prevent range errors 
+    // redefining the attribute seems to prevent range errors
     // if the user sets a differing number of vertices
     if (!this._attributes || this._attributes.position.count !== this.positions.length) {
       this._attributes = {
@@ -294,13 +294,13 @@
       this._attributes.index.needsUpdate = true
     }
 
-    this.addAttribute('position', this._attributes.position)
-    this.addAttribute('previous', this._attributes.previous)
-    this.addAttribute('next', this._attributes.next)
-    this.addAttribute('side', this._attributes.side)
-    this.addAttribute('width', this._attributes.width)
-    this.addAttribute('uv', this._attributes.uv)
-    this.addAttribute('counters', this._attributes.counters)
+    this.setAttribute('position', this._attributes.position)
+    this.setAttribute('previous', this._attributes.previous)
+    this.setAttribute('next', this._attributes.next)
+    this.setAttribute('side', this._attributes.side)
+    this.setAttribute('width', this._attributes.width)
+    this.setAttribute('uv', this._attributes.uv)
+    this.setAttribute('counters', this._attributes.counters)
 
     this.setIndex(this._attributes.index)
 
@@ -396,7 +396,7 @@
     '',
     '    vec2 res = i.xy / i.w;',
     '    res.x *= aspect;',
-    '	 vCounters = counters;',
+    '  vCounters = counters;',
     '    return res;',
     '',
     '}',
